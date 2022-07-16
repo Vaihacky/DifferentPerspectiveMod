@@ -1,7 +1,6 @@
 package com.vaihacky.differentperspective.client.event;
 
 import com.vaihacky.differentperspective.DifferentPerspective;
-import com.vaihacky.differentperspective.client.KeyMappings;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.CameraType;
@@ -19,22 +18,22 @@ public final class ClientForgeEvents {
 	
 	@SubscribeEvent
 	public static void clientTick(ClientTickEvent event) {
-		final var options = Minecraft.getInstance().options;
-		while(KeyMappings.dpBackPerspective.consumeClick()) {
-			if (options.getCameraType().isFirstPerson()
-                    || options.getCameraType().equals(CameraType.THIRD_PERSON_FRONT)) {
-                options.setCameraType(CameraType.THIRD_PERSON_BACK);
+		final var mc = Minecraft.getInstance();
+		while(ClientModEvents.BACK_PERSPECTIVE.consumeClick()) {
+			if (mc.options.getCameraType().isFirstPerson()
+                    || mc.options.getCameraType().equals(CameraType.THIRD_PERSON_FRONT)) {
+				mc.options.setCameraType(CameraType.THIRD_PERSON_BACK);
             } else {
-                options.setCameraType(CameraType.FIRST_PERSON);
+            	mc.options.setCameraType(CameraType.FIRST_PERSON);
             }
         }
 		
-		while(KeyMappings.dpFrontPerspective.consumeClick()) {
-			if (options.getCameraType().isFirstPerson()
-                    || options.getCameraType().equals(CameraType.THIRD_PERSON_BACK)) {
-                options.setCameraType(CameraType.THIRD_PERSON_FRONT);
+		while(ClientModEvents.FRONT_PERSPECTIVE.consumeClick()) {
+			if (mc.options.getCameraType().isFirstPerson()
+                    || mc.options.getCameraType().equals(CameraType.THIRD_PERSON_BACK)) {
+				mc.options.setCameraType(CameraType.THIRD_PERSON_FRONT);
             } else {
-                options.setCameraType(CameraType.FIRST_PERSON);
+            	mc.options.setCameraType(CameraType.FIRST_PERSON);
             }
         }
 	};
