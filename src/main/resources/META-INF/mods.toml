@@ -1,27 +1,28 @@
-modLoader="javafml" #mandatory
-loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+modLoader="javafml"
+loaderVersion="[40,)"
 license="MIT"
 [[mods]] #mandatory
-modId="differentperspective" #mandatory
-version="1.18.2-1.0.0" #mandatory
-displayName="Different Perspective Mod" #mandatory
-logoFile="logo.png" #optional
-credits="" #optional
-authors="Vaihacky" #optional
+modId="differentperspective"
+version="1.18.2-1.0.2" #mandatory
+displayName="Different Perspective Mod"
+logoFile="logo.png"
+credits=""
+authors="Vaihacky"
+
 description='''
-Different Perspective Mod allows you to change perspective of your camera without the need of cycling all of them
+Different Perspective Mod allows you to change perspective of your camera without the need of cycling through all of them
 '''
 
-[[dependencies.differentperspective]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[40,)" #mandatory
+[[dependencies.differentperspective]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
     ordering="NONE"
-    side="BOTH"
-    
+    side="CLIENT"
+
 [[dependencies.differentperspective]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
-    side="BOTH"
+    side="CLIENT"

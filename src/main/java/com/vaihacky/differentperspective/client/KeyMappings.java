@@ -10,16 +10,16 @@ public final class KeyMappings {
 		
 	}
 	
-	public static KeyMapping dpFrontPerspective;
-	public static KeyMapping dpBackPerspective;
+	public static KeyMapping FRONT_PERSPECTIVE;
+	public static KeyMapping BACK_PERSPECTIVE;
 	
 	public static void init() {
-		dpFrontPerspective = registerKey("front_perspective", KeyMapping.CATEGORY_INTERFACE, InputConstants.KEY_G);
-		dpBackPerspective = registerKey("back_perspective", KeyMapping.CATEGORY_INTERFACE, InputConstants.KEY_H);
+		FRONT_PERSPECTIVE = registerKey("front_perspective", KeyMapping.CATEGORY_INTERFACE, InputConstants.KEY_H);
+		BACK_PERSPECTIVE = registerKey("back_perspective", KeyMapping.CATEGORY_INTERFACE, InputConstants.KEY_G);
 	}
 	
 	private static KeyMapping registerKey(String name, String category, int keycode) {
-		final var key = new KeyMapping("key." + DifferentPerspective.MOD_ID + "." + name, keycode, category);
+		final var key = new KeyMapping(DifferentPerspective.KEY_ID + name, keycode, category);
 		ClientRegistry.registerKeyBinding(key);
 		return key;
 	}
