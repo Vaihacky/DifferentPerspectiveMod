@@ -3,7 +3,7 @@ loaderVersion="[40,)"
 license="MIT"
 [[mods]] #mandatory
 modId="differentperspective"
-version="1.18.2-1.0.2" #mandatory
+version="1.18.2-1.0.3" #mandatory
 displayName="Different Perspective Mod"
 logoFile="logo.png"
 credits=""

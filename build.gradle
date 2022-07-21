@@ -14,7 +14,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.18.2-1.0.2'
+version = '1.18.2-1.0.3'
 group = 'com.vaihacky.differentperspective'
 archivesBaseName = 'differentperspective'
 
@@ -100,7 +100,7 @@ repositories {
 
 dependencies {
 
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.67'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.68'
 
 }
 
