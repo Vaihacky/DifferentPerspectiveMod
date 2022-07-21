@@ -4,11 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-<<<<<<< Updated upstream
-version = '1.1.0'
-=======
 version = '1.19-1.1.1'
->>>>>>> Stashed changes
 group = 'com.vaihacky.differentperspective'
 archivesBaseName = 'differentperspective'
 
@@ -92,11 +88,7 @@ repositories {
 
 dependencies {
 
-<<<<<<< Updated upstream
-    minecraft 'net.minecraftforge:forge:1.19-41.0.99'
-=======
     minecraft 'net.minecraftforge:forge:1.19-41.0.105'
->>>>>>> Stashed changes
 
 }
 
